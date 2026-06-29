@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/mp3 icon.png" type="image/x-icon">
+    <title>mp3 player</title>
+    <link rel="stylesheet" href="./audio.css">
+    <style>
+        #body-background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        body {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <img id="body-background-image" src="./images/Waiting for Bus 832.jpeg" alt="Image not found">
+
+    <div class="audio-player">
+        <audio id="myAudio"></audio>
+        <div class="controls">
+            <button id="prevBtn">Previous</button> <button id="playPauseBtn">Play</button>
+            <button id="nextBtn">Next</button>
+            <button id="shuffleBtn">Shuffle</button>
+            <div class="timer-input">
+                <div class="timer-segment">
+                    <label for="hoursInput">Hours:</label>
+                    <input type="number" id="hoursInput" value="0" min="0" max="99">
+                </div>
+                <div class="timer-segment">
+                    <label for="minutesInput">Minutes:</label>
+                    <input type="number" id="minutesInput" value="0" min="0" max="59">
+                </div>
+                <div class="timer-segment">
+                    <label for="secondsInput">Seconds:</label>
+                    <input type="number" id="secondsInput" value="0" min="0" max="59">
+                </div>
+            </div>
+            <span id="timerDisplay">00:00:30</span>
+        </div>
+        <div class="playlist-controls">
+            <input type="file" id="playlistInput" accept="audio/*" multiple>
+            <ul id="playlistDisplay">
+            </ul>
+        </div>
+    </div>
+    <script src="./audio.js"></script>
+<footer class="footer">
+    <p>&copy; 2026 Giri Balaji C. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
